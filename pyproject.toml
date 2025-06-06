@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mof_benchmark"
+authors = [
+    {name = "Hendrik Kraß", email = "hendriknkrass@gmail.com"},
+]
+description = "package description"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+    "ase",
+    "pyyaml",
+    "ipykernel",
+    "numpy",
+    "pymatgen",
+    "pandas",
+    "matplotlib",
+    "scipy",
+    "submitit",
+    "streamlit",
+    "plotly",
+    "ipywidgets>=7.0.0",
+    "phonopy",
+    "tueplots",
+    "fastparquet",
+    "seaborn",
+    "scikit-learn",
+    "pypalettes",
+]
+
+[project.optional-dependencies]
+mace = ["mace-torch"]
+mace_d3 = ["mace-torch", "torch-dftd"]

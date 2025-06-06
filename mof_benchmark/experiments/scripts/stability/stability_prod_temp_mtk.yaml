@@ -1,0 +1,131 @@
+# structure file or shortcut string
+structure:
+  - essential
+
+# default dir for files with relative paths. if specified, all files are copied from tmp_dir to output_dir after the run
+tmp_dir: $TMP 
+
+# if not specified, the output will be saved in the current directory
+output_dir: "{base_dir}/outputs/stability/{calculator}/prod/nptmtk_temp"
+
+stages:
+  - opt:
+      criterion:
+        fmax: 0.001
+        steps: 1000
+      optimizer: LBFGS
+  - nvt:
+      dynamics: langevin
+      total_steps: 1000
+      initial_temperature: 300
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 1
+      ase_md_kwargs:
+        timestep: 1
+        friction: 0.002
+        temperature_K: 300
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 300
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 2
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 300
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 400
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 3
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 400
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 500
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 4
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 500
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 600
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 5
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 600
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 700
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 6
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 700
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 800
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 7
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 800
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 900
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 8
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 900
+        tdamp: 100
+        pdamp: 1000
+  - isotropicmtknpt:
+      dynamics: isotropicmtknpt
+      total_steps: 20000
+      initial_temperature: 1000
+      append_trajectory: true
+      trajectory_interval: 100
+      stage: 9
+      ase_md_kwargs:
+        timestep: 1
+        pressure_au: 1 # bar
+        temperature_K: 1000
+        tdamp: 100
+        pdamp: 1000

@@ -1,0 +1,104 @@
+grace_prod:
+  model_name: GRACE-2L-MP-r6
+  with_d3: true
+
+grace_prod_oam:
+  model_name: GRACE-2L-OAM
+  with_d3: true
+
+grace_prod_omat:
+  model_name: GRACE-2L-OMAT
+  with_d3: true
+
+mace_prod_b3:
+  model_file: mace-mp-0b3-medium.model
+  precision: float32
+  with_d3: true
+
+mace_prod_0a:
+  model_file: 2023-12-03-mace-128-L1_epoch-199.model
+  precision: float32
+  with_d3: true
+
+mace_prod_mof:
+  model_file: mofs_v1.model
+  precision: float32
+  with_d3: false
+
+mace_prod:
+  model_file: mace-mpa-0-medium.model
+  precision: float32
+  with_d3: true
+
+mace_prod_omat:
+  model_file: mace-omat-0-medium.model
+  precision: float32
+  with_d3: true
+
+mace_prod_matpes:
+  model_file: MACE-matpes-r2scan-omat-ft.model
+  precision: float32
+  with_d3: true
+
+mattersim_prod:
+  load_path: MatterSim-v1.0.0-5M.pth
+  with_d3: true
+
+omat24_prod_mp:
+  checkpoint_path: eqV2_dens_86M_mp.pt
+  with_d3: true
+
+omat24_prod:
+  checkpoint_path: eqV2_86M_omat_mp_salex.pt
+  with_d3: true
+
+omat24_prod_esen:
+  checkpoint_path: esen_30m_oam.pt
+  with_d3: true
+
+omat24_prod_esen_mp:
+  checkpoint_path: esen_30m_mptrj.pt
+  with_d3: true
+
+orb_prod_mp:
+  model_name: orb-mptraj-only-v2
+  with_d3: true
+
+orb_prod:
+  model_name: orb-d3-v2
+
+orb3:
+  model_name: orb-v3-direct-20-omat
+  with_d3: false
+  model_kwargs:
+    precision: float32-high
+
+orb_prod_v3:
+  model_name: orb-v3-conservative-inf-omat
+  with_d3: true
+  model_kwargs:
+    precision: float32-highest
+
+orb_prod_v3_mp:
+  model_name: orb-v3-conservative-inf-mpa
+  with_d3: true
+  model_kwargs:
+    precision: float32-highest
+
+sevennet_prod:
+  model_name: 7net-0
+  with_d3: true
+
+sevennet_prod_l3i5:
+  model_name: 7net-l3i5
+  with_d3: true
+
+sevennet_prod_ompa:
+  model_name: 7net-mf-ompa
+  with_d3: true
+  kwargs:
+    modal: mpa
+
+sevennet_prod_nod3:
+  model_name: 7net-0
+  with_d3: false

@@ -1,0 +1,40 @@
+data_crystal
+
+_audit_creation_method 'AiiDA-DDEC plugin'
+
+_cell_length_a         6.01893
+_cell_length_b         6.86262
+_cell_length_c         6.50313
+
+_cell_angle_alpha     97.34516
+_cell_angle_beta     34.38456
+_cell_angle_gamma     94.86059
+
+_symmetry_space_group_name_Hall 'P 1'
+_symmetry_space_group_name_H-M  'P 1'
+
+loop_
+_symmetry_equiv_pos_as_xyz
+ 'x,y,z'
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_charge
+Eu         Eu      0.82897   0.64111   0.51106   1.78570
+H          H       0.34259   0.37256   0.54346  -0.00044
+H          H       0.43420   0.24165   0.96487   0.00234
+H          H       0.95194   0.80064   0.90284   0.00638
+C          C       0.09216   0.41242   0.85658   0.46046
+C          C       0.73498   0.18192   0.65710   0.48269
+C          C       0.61490   0.78800   0.16137   0.48724
+O          O       0.40397   0.82058   0.48148  -0.45558
+O          O       0.75541   0.34797   0.09495  -0.39466
+O          O       0.19262   0.54548   0.93476  -0.71158
+O          O       0.47552   0.72688   0.08580  -0.67778
+O          O       0.00131   0.29188   0.39709  -0.53096
+O          O       0.77732  -0.00028   0.59664  -0.45381
+

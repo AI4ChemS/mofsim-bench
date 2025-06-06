@@ -1,0 +1,24 @@
+# structure file or shortcut string
+structure: 
+  - hcmof
+
+# default dir for files with relative paths. if specified, all files are copied from tmp_dir to output_dir after the run
+tmp_dir: $TMP 
+
+# if not specified, the output will be saved in the current directory
+output_dir: "{base_dir}/outputs/heat_capacity/{calculator}/prod/"
+
+stages:
+  - opt:
+      criterion:
+        fmax: 0.001
+        steps: 1000
+      optimizer: BFGS
+      filter: FrechetCellFilter
+  - heat_capacity:
+      supercell_matrix: [1,1,1]
+      mesh: 100
+      t_min: 0
+      t_max: 1000
+      t_step: 10
+      

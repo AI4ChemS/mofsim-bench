@@ -1,0 +1,8 @@
+structure:
+  - golddac
+
+# default dir for files with relative paths. if specified, all files are copied from tmp_dir to output_dir after the run
+tmp_dir: $TMP 
+
+# if not specified, the output will be saved in the current directory
+output_dir: "{base_dir}/outputs/interaction_energy/{calculator}/v1/"
