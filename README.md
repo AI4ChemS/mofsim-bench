@@ -1,6 +1,8 @@
 # MOFSimBench: Benchmarking Universal Machine Learning Interatomic Potentials for Metal-Organic Frameworks
 
-This repository contains the code and data for the paper "MOFSimBench: Evaluating Universal Machine Learning Interatomic Potentials for Metal-Organic Framework Molecular Modeling". The project aims to benchmark the performance of various Universal Machine Learning Interatomic Potentials (UMLIPs) in simulating Metal-Organic Frameworks (MOFs) across different properties, including structural optimization, simulation stability, and bulk modulus and heat capacity.
+[![arXiv](https://img.shields.io/badge/arXiv-2507.11806-b31b1b.svg)](https://arxiv.org/abs/2507.11806)
+
+This repository contains the code and data for the paper "MOFSimBench: Evaluating Universal Machine Learning Interatomic Potentials for Metal-Organic Framework Molecular Modeling". The project aims to benchmark the performance of various Universal Machine Learning Interatomic Potentials (uMLIPs) in simulating Metal-Organic Frameworks (MOFs) across different properties, including structural optimization, simulation stability, and bulk modulus and heat capacity.
 
 
 ## Table of Contents
@@ -165,3 +167,20 @@ Task classes are inherited from the `TaskRunner` which handles three aspects:
 To perform a task, the `run_task` method has to be implemented. Storing results needs to be handled in this method as well.
 
 Structures can be defined using file paths or loaded from the structure shortcuts defined in `mof_benchmark/experiments/structures/structures.yaml`.
+
+
+## Citation
+
+If you use this benchmark in your research, please cite our paper:
+
+```bibtex
+@misc{krass2025mofsimbench,
+      title={MOFSimBench: Evaluating Universal Machine Learning Interatomic Potentials In Metal-Organic Framework Molecular Modeling}, 
+      author={Hendrik Kraß and Ju Huang and Seyed Mohamad Moosavi},
+      year={2025},
+      eprint={2507.11806},
+      archivePrefix={arXiv},
+      primaryClass={cond-mat.mtrl-sci},
+      url={https://arxiv.org/abs/2507.11806},
+}
+```
