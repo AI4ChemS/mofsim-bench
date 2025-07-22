@@ -125,7 +125,7 @@ def structure_to_files(structure: Union[str, list[str]]) -> list[str]:
                     # )
                 )
 
-            raise ValueError(f"Structure shortcut {structure} not found.")
+            raise ValueError(f"File or structure shortcut {structure} not found.")
 
     else:
         return [path for s in structure for path in structure_to_files(s)]

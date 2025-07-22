@@ -99,6 +99,8 @@ sevennet_prod_ompa:
   kwargs:
     modal: mpa
 
-sevennet_prod_nod3:
-  model_name: 7net-0
-  with_d3: false
+sevennet_prod_ompa_omat:
+  model_name: 7net-mf-ompa
+  with_d3: true
+  kwargs:
+    modal: omat24

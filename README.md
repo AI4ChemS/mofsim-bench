@@ -45,6 +45,14 @@ pip install .
 pip install torch-dftd
 ```
 
+5. **Make sure to install an ase version that contains the `MTKNPT` driver:**
+
+Our NpT tests rely on this driver, which is not currently available in a pypi release of `ase`. You can install it from the `ase` GitHub repository:
+
+```bash
+pip install git+https://gitlab.com/ase/ase.git
+```
+
 ## :gear: Setting up your calculator
 
 Set up your calculator in the `mof_benchmark/setup/calculator.yaml` and `mof_benchmark/setup/calculator.py` files.
@@ -124,7 +132,7 @@ The index (0-99) specifies the structure to run.
 
 ### QMOF energy comparison task
 
-As an additional test, we compare the energy predictions of uMLIPs to QMOF DFT references. To run this task, you have to download the QMOF database and place the `qmof_database` folder in `mof_benchmark/experiments/structures`.
+As an additional test, we compare the energy predictions of uMLIPs to QMOF DFT references. To run this task, download the QMOF database and place the `qmof_database` folder in `mof_benchmark/experiments/structures`. Make sure to unzip `relaxed_structures.zip`.
 
 ### Interaction energy task
 

@@ -31,7 +31,9 @@ dependencies = [
     "seaborn",
     "scikit-learn",
     "pypalettes",
+    "pymatviz",
 ]
+
 
 [project.optional-dependencies]
 mace = ["mace-torch"]

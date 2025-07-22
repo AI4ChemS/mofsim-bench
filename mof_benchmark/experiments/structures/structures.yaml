@@ -10,10 +10,8 @@ main_set:
   - main_set/gmof_AlO6-DPAC_A_No31.cif
   - main_set/gmof_AlO6-ADC_A_No11.cif
   - main_set/boydwoo_str_m3_o3_o27_pcu_sym_138.cif
-  - main_set/boydwoo_str_m3_o23_o28_pcu_sym_68.cif
   - main_set/tobacco_bor_sym_3_mc_0_sym_4_on_6_L_19.cif
   - main_set/SAS_primitive.cif
-  - main_set/boydwoo_str_m3_o1_o22_nbo_sym_166.cif
   - main_set/LTL.cif
   - main_set/boydwoo_str_m3_o7_o27_pcu_sym_8.cif
   - main_set/UYURUC_full.cif
@@ -23,9 +21,7 @@ main_set:
   - main_set/CAMWOG_full.cif
   - main_set/IKEVEC_full.cif
   - main_set/tobacco_bor_sym_3_mc_0_sym_4_on_8_L_14.cif
-  - main_set/boydwoo_str_m3_o12_o28_pcu_sym_148.cif
   - main_set/EKOKUN_full.cif
-  - main_set/boydwoo_str_m3_o11_o22_nbo_sym_137.cif
   - main_set/NUVCUD_full.cif
   - main_set/WEYREA01_full.cif
   - main_set/HICCUU_full.cif
@@ -56,7 +52,6 @@ main_set:
   - main_set/QUSJEW_full_primitive.cif
   - main_set/AXIPEE01_full.cif
   - main_set/HIQLIF_full.cif
-  - main_set/NAWKII_full.cif
   - main_set/FOCJAL01_full.cif
   - main_set/OQOCOP_full.cif
   - main_set/MFI.cif
@@ -72,7 +67,6 @@ main_set:
   - main_set/MOR.cif
   - main_set/12022N2.cif
   - main_set/gmof_Uio66Zr-irmof8_A-imd_No17.cif
-  - main_set/AZUFAC_full.cif
   - main_set/ZOHQOF_full.cif
   - main_set/QOWRAV09_full_primitive.cif
   - main_set/XUMFOC_full.cif
@@ -102,6 +96,12 @@ main_set:
   - main_set/ZEDWAJ_full.cif
   - main_set/gmof_AlO6-ADC_A_No25.cif
   - main_set/core_DACFAR_freeONLY.cif
+  - main_set/AlPMOF.cif
+  - main_set/AlPyrMOF.cif
+  - main_set/calf.cif
+  - main_set/CoMOF74.cif
+  - main_set/MgMOF74.cif
+  - main_set/zif-8.cif
 copper:
   - copper/tobacco_bor_sym_3_mc_0_sym_4_on_8_L_15.cif 
   - copper/tobacco_bor_sym_3_mc_0_sym_4_on_6_L_3.cif  

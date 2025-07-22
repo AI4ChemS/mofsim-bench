@@ -9,7 +9,7 @@
 #SBATCH --partition=gpu_h100,gpu_a100_il,gpu_h100_il
 #SBATCH --output=logs/slurm-%A_%a.out
 #SBATCH --error=logs/slurm-%A_%a.out
-#SBATCH --array 0-155
+#SBATCH --array 0-99
 
 CALCULATOR=$1
 SETTINGS=$2

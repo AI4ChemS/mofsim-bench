@@ -67,14 +67,32 @@ def process_file(file: str, calculator: str, settings: str) -> Dict:
         numbers = traj[0].get_atomic_numbers()
         where_metal = is_metal(numbers)
         metal_numbers = numbers[where_metal]
-        nn = CrystalNN(x_diff_weight=1.5, search_cutoff=4.5)
+        nn = CrystalNN(x_diff_weight=1.5, search_cutoff=4.5, weighted_cn=True)
         structure = AseAtomsAdaptor.get_structure(traj[0])
         coordination_numbers_initial = np.asarray(
-            [nn.get_cn(structure, int(i)) for i in where_metal.nonzero()[0]]
+            [
+                nn.get_cn(structure, int(i), use_weights=True)
+                for i in where_metal.nonzero()[0]
+            ]
         )
         structure = AseAtomsAdaptor.get_structure(traj[-1])
         coordination_numbers_final = np.asarray(
-            [nn.get_cn(structure, int(i)) for i in where_metal.nonzero()[0]]
+            [
+                nn.get_cn(structure, int(i), use_weights=True)
+                for i in where_metal.nonzero()[0]
+            ]
+        )
+        last_optimization_step = traj[
+            np.where(np.asarray([atoms.info.get("stage", -1) for atoms in traj]) == 0)[
+                0
+            ][-1]
+        ]
+        structure = AseAtomsAdaptor.get_structure(last_optimization_step)
+        coordination_numbers_opt = np.asarray(
+            [
+                nn.get_cn(structure, int(i), use_weights=True)
+                for i in where_metal.nonzero()[0]
+            ]
         )
 
         coordination_df = pd.DataFrame(
@@ -82,8 +100,10 @@ def process_file(file: str, calculator: str, settings: str) -> Dict:
                 "numbers": metal_numbers,
                 "initial_coordination": coordination_numbers_initial,
                 "final_coordination": coordination_numbers_final,
+                "opt_coordination": coordination_numbers_opt,
             }
         )
+
         mean_coordination_numbers = (
             coordination_df.groupby("numbers").mean().reset_index()
         )
@@ -111,6 +131,9 @@ def process_file(file: str, calculator: str, settings: str) -> Dict:
             ].to_numpy(),
             "final_coordination": mean_coordination_numbers[
                 "final_coordination"
+            ].to_numpy(),
+            "opt_coordination": mean_coordination_numbers[
+                "opt_coordination"
             ].to_numpy(),
             "symbol": symbols,
         }

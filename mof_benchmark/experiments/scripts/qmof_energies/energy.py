@@ -19,7 +19,13 @@ class EnergyRunner(TaskRunner):
         **kwargs,
     ):
 
-        files_path = base_dir / "experiments" / "qmof_database" / "relaxed_structures"
+        files_path = (
+            base_dir
+            / "experiments"
+            / "structures"
+            / "qmof_database"
+            / "relaxed_structures"
+        )
         files = os.listdir(files_path)
         files = [os.path.join(files_path, file) for file in files]
 

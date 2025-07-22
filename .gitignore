@@ -178,7 +178,6 @@ mof_benchmark/experiments/scripts/stability/slurm-*.out
 mof_benchmark/analysis/paper/figures/*
 mof_benchmark/setup/pos-egnn.v1-6M.ckpt
 mof_benchmark/setup/pos_egnn
-mof_benchmark/analysis/dft_data/
 mof_benchmark/analysis/slurm-*.out
 mof_benchmark/analysis/results/
 mof_benchmark/setup/*.pt
@@ -186,3 +185,4 @@ mof_benchmark/setup/*.model
 mof_benchmark/analysis/plot/figures/*.pdf
 mof_benchmark/experiments/structures/golddac/*.xyz
 mof_benchmark/analysis/interaction_energy/test.xyz
+mof_benchmark/experiments/scripts/run_all_calcs.sh

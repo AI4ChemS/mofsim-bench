@@ -6,3 +6,5 @@ cd ../bulk_modulus
 python bulk_modulus.py
 cd ../stability
 python stability.py
+cd ../interaction_energy
+python interaction_energy.py
