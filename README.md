@@ -47,7 +47,7 @@ pip install torch-dftd
 
 5. **Make sure to install an ase version that contains the `MTKNPT` driver:**
 
-Our NpT tests rely on this driver, which is not currently available in a pypi release of `ase`. You can install it from the `ase` GitHub repository:
+Our NpT tests rely on this driver, which is not currently available in a pypi release of `ase`. You can install it from the `ase` git repository:
 
 ```bash
 pip install git+https://gitlab.com/ase/ase.git
