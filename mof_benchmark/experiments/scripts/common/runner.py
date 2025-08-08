@@ -62,7 +62,11 @@ class TaskRunner:
             output_dir=get_path(
                 self.settings["output_dir"], calculator=self.calculator
             ),
-            tmp_dir=get_path(self.settings["tmp_dir"], calculator=self.calculator),
+            tmp_dir=(
+                get_path(self.settings["tmp_dir"], calculator=self.calculator) 
+                if self.settings["tmp_dir"] is not None
+                else None
+            ),
             copy_outputs=True,
         ):
             logger.info(f"Working in {os.getcwd()}.")
