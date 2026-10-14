@@ -1,6 +1,5 @@
 # MOFSimBench: Benchmarking Universal Machine Learning Interatomic Potentials for Metal-Organic Frameworks
 
-[![arXiv](https://img.shields.io/badge/arXiv-2507.11806-b31b1b.svg)](https://arxiv.org/abs/2507.11806)
 [![Article](https://img.shields.io/badge/Article-npj%20Comp%20Mat-blue)](https://doi.org/10.1038/s41524-025-01872-3)
 
 
